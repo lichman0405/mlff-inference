@@ -1,0 +1,14 @@
+include LICENSE
+include README.md
+include QUICKSTART.md
+include INSTALL_GUIDE.md
+include pyproject.toml
+
+recursive-include src/mattersim_inference *.py
+recursive-include examples *.py *.cif *.xyz
+recursive-include tests *.py
+
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .DS_Store

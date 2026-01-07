@@ -1,0 +1,35 @@
+# PyTorch (GPU版本)
+# 根据CUDA版本选择：
+# - CUDA 11.8: torch==2.3.1 --index-url https://download.pytorch.org/whl/cu118
+# - CUDA 12.1: torch==2.3.1 --index-url https://download.pytorch.org/whl/cu121
+# 
+# 安装命令：
+# pip install torch==2.3.1 torchvision --index-url https://download.pytorch.org/whl/cu118
+# 或
+# pip install torch==2.3.1 torchvision --index-url https://download.pytorch.org/whl/cu121
+# 
+# 然后安装下面的包：
+# pip install -r requirements-gpu.txt
+
+# Orb Models
+orb-models
+
+# Atomic Simulation Environment
+ase>=3.23.0
+
+# Phonon calculations
+phonopy>=2.20.0
+
+# Numerical computing
+numpy>=1.20.0
+
+# Visualization (optional)
+matplotlib>=3.0.0
+
+# Jupyter (optional, uncomment if needed)
+# jupyter
+# ipython
+
+# 注意：PyTorch需要单独安装（见上方说明）
+# ⚠️ 避免使用 PyTorch 2.4.1（可能不兼容）
+# ✅ 推荐使用 PyTorch 2.3.1

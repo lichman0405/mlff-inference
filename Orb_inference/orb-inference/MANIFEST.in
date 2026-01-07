@@ -1,0 +1,18 @@
+include README.md
+include LICENSE
+include QUICKSTART.md
+include INSTALL_GUIDE.md
+include requirements-cpu.txt
+include requirements-gpu.txt
+
+recursive-include src/orb_inference *.py
+recursive-include examples *.py
+recursive-include tests *.py
+
+exclude .gitignore
+exclude pyproject.toml
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.traj
+global-exclude *.log

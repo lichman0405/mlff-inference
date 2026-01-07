@@ -1,0 +1,51 @@
+# ============================================================
+# eSEN Inference Environment Requirements - GPU Version
+# ============================================================
+# 环境名称建议: esen-inference-gpu
+# Python版本要求: >= 3.9, <= 3.11 (推荐 3.10)
+# 
+# 安装说明:
+# 1. 创建conda环境: conda create -n esen-inference-gpu python=3.10
+# 2. 激活环境: conda activate esen-inference-gpu
+# 3. 安装GPU版PyTorch (根据CUDA版本选择):
+#    - CUDA 12.1: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#    - CUDA 11.8: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# 4. 安装本文件依赖: pip install -r requirements-gpu.txt
+#
+# 适用场景:
+# - 大型MOF结构优化
+# - 长时间MD模拟 (NPT, 高温稳定性等)
+# - 批量推理任务
+# - 声子/热容计算
+#
+# 硬件要求:
+# - NVIDIA GPU (计算能力 >= 6.0)
+# - GPU显存 >= 8GB (推荐 >= 16GB)
+# - CUDA 11.8 或 12.1
+# ============================================================
+
+# -------------------- 核心依赖 --------------------
+# FAIR-Chem (eSEN后端)
+fairchem-core>=1.0.0              # FAIR-Chem主包，包含eSEN模型
+
+# 原子模拟环境
+ase>=3.22.0                       # Atomic Simulation Environment
+
+# 声子计算
+phonopy>=2.20.0                   # 声子计算和热力学性质
+
+# -------------------- eSEN核心依赖 --------------------
+numpy>=1.21.0,<2.0.0              # 数值计算
+scipy>=1.7.0                      # 科学计算
+
+# -------------------- 工具库 --------------------
+h5py                              # HDF5文件支持
+matplotlib>=3.5.0                 # 绘图
+pandas                            # 数据分析
+tqdm                              # 进度条
+prettytable                       # 表格打印
+pyyaml                            # YAML配置文件
+
+# -------------------- 结构分析 --------------------
+pymatgen>=2023.0.0                # 材料基因组工具
+spglib>=2.0.0                     # 空间群分析

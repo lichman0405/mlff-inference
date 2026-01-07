@@ -1,0 +1,69 @@
+# ============================================================
+# MACE Inference Environment Requirements - GPU Version
+# ============================================================
+# 环境名称建议: mace-inference-gpu
+# Python版本要求: >= 3.9, <= 3.11 (推荐 3.10)
+# 
+# 安装说明:
+# 1. 创建conda环境: conda create -n mace-inference-gpu python=3.10
+# 2. 激活环境: conda activate mace-inference-gpu
+# 3. 安装GPU版PyTorch (根据CUDA版本选择):
+#    - CUDA 12.1: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#    - CUDA 11.8: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# 4. 安装本文件依赖: pip install -r requirements-gpu.txt
+#
+# 适用场景:
+# - 大型MOF结构优化
+# - 长时间MD模拟 (NPT, 高温稳定性等)
+# - 批量推理任务
+# - 声子/热容计算
+#
+# 硬件要求:
+# - NVIDIA GPU (计算能力 >= 6.0)
+# - GPU显存 >= 8GB (推荐 >= 16GB)
+# - CUDA 11.8 或 12.1
+# ============================================================
+
+# -------------------- 核心依赖 --------------------
+# MACE模型
+mace-torch>=0.3.10                # MACE主包，包含预训练模型
+
+# 原子模拟环境
+ase>=3.22.0                       # Atomic Simulation Environment
+
+# 声子计算
+phonopy>=2.20.0                   # 声子计算和热力学性质
+
+# -------------------- MACE核心依赖 --------------------
+e3nn==0.4.4                       # E(3)等变神经网络（固定版本，重要！）
+numpy>=1.21.0,<2.0.0              # 数值计算
+opt_einsum                        # 优化的Einstein求和
+torch-ema                         # 指数移动平均
+matscipy                          # 材料科学工具
+
+# -------------------- D3色散校正 --------------------
+torch-dftd>=0.4.0                 # PyTorch实现的DFT-D3色散校正 (GPU加速)
+
+# -------------------- 工具库 --------------------
+h5py                              # HDF5文件支持
+matplotlib>=3.5.0                 # 绘图
+pandas                            # 数据分析
+tqdm                              # 进度条
+prettytable                       # 表格打印
+pyyaml                            # YAML配置文件
+
+# -------------------- 结构分析 --------------------
+pymatgen>=2023.0.0                # 材料基因组工具
+spglib>=2.0.0                     # 空间群分析
+
+# -------------------- GPU加速 (可选) --------------------
+# 取消注释以启用cuEquivariance加速 (约2-3倍速度提升)
+# 需要先确认CUDA版本
+
+# CUDA 12.x:
+# cuequivariance-torch>=0.2.0
+# cuequivariance-ops-torch-cu12>=0.2.0
+
+# CUDA 11.x:
+# cuequivariance-torch>=0.2.0
+# cuequivariance-ops-torch-cu11>=0.2.0

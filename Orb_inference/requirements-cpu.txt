@@ -1,0 +1,22 @@
+# PyTorch (CPU版本)
+torch==2.3.1
+torchvision
+
+# Orb Models
+orb-models
+
+# Atomic Simulation Environment
+ase>=3.23.0
+
+# Phonon calculations
+phonopy>=2.20.0
+
+# Numerical computing
+numpy>=1.20.0
+
+# Visualization (optional)
+matplotlib>=3.0.0
+
+# Jupyter (optional, uncomment if needed)
+# jupyter
+# ipython

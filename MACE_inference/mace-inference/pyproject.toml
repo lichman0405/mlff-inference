@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mace-inference"
+version = "0.1.0"
+description = "High-level Python library for MACE machine learning force field inference tasks"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "MACE Inference Contributors"}
+]
+keywords = ["machine learning", "force field", "molecular dynamics", "materials science", "MACE"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+dependencies = [
+    "mace-torch>=0.3.10",
+    "ase>=3.22.0",
+    "phonopy>=2.20.0",
+    "numpy>=1.20.0",
+    "click>=8.0.0",
+]
+
+[project.optional-dependencies]
+d3 = [
+    "torch-dftd>=0.4.0",
+]
+gpu = [
+    "torch>=2.3.0,<2.4.0",  # PyTorch 2.4.1 不支持
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+all = [
+    "mace-inference[d3,gpu,dev]",
+]
+
+[project.scripts]
+mace-infer = "mace_inference.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mace-inference"
+Documentation = "https://mace-inference.readthedocs.io"
+Repository = "https://github.com/yourusername/mace-inference"
+Issues = "https://github.com/yourusername/mace-inference/issues"
+
+[tool.setuptools]
+packages = ["mace_inference", "mace_inference.tasks", "mace_inference.utils"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+mace_inference = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=mace_inference --cov-report=html --cov-report=term"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

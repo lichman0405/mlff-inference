@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "equiformerv2-inference"
+version = "0.1.0"
+description = "EquiformerV2 inference package for MOF property predictions"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "EquiformerV2 Inference Contributors"}
+]
+requires-python = ">=3.9,<3.12"
+dependencies = [
+    "equiformer-v2>=0.1.0",
+    "e3nn>=0.5.0",
+    "torch-geometric>=2.3.0",
+    "ase>=3.22.0",
+    "numpy>=1.21.0,<2.0.0",
+    "scipy>=1.7.0",
+    "torch>=2.0.0",
+    "phonopy>=2.20.0",
+    "pymatgen>=2023.0.0",
+    "h5py",
+    "matplotlib>=3.5.0",
+    "pandas",
+    "tqdm",
+    "prettytable",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+]
+gpu = [
+    "torch>=2.0.0",
+    "torch-geometric>=2.3.0",
+]
+
+[project.scripts]
+equiformerv2-infer = "equiformerv2_inference.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"

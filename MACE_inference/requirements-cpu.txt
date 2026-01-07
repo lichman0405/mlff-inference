@@ -1,0 +1,51 @@
+# ============================================================
+# MACE Inference Environment Requirements - CPU Version
+# ============================================================
+# 环境名称建议: mace-inference-cpu
+# Python版本要求: >= 3.9, <= 3.11 (推荐 3.10)
+# 
+# 安装说明:
+# 1. 创建conda环境: conda create -n mace-inference-cpu python=3.10
+# 2. 激活环境: conda activate mace-inference-cpu
+# 3. 安装CPU版PyTorch: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# 4. 安装本文件依赖: pip install -r requirements-cpu.txt
+#
+# 适用场景:
+# - 小型结构测试和开发
+# - 无GPU的服务器/笔记本
+# - 轻量级推理任务
+#
+# 注意: CPU版本计算速度较慢，不建议用于大型MOF结构或长时间MD模拟
+# ============================================================
+
+# -------------------- 核心依赖 --------------------
+# MACE模型
+mace-torch>=0.3.10                # MACE主包，包含预训练模型
+
+# 原子模拟环境
+ase>=3.22.0                       # Atomic Simulation Environment
+
+# 声子计算
+phonopy>=2.20.0                   # 声子计算和热力学性质
+
+# -------------------- MACE核心依赖 --------------------
+e3nn==0.4.4                       # E(3)等变神经网络（固定版本，重要！）
+numpy>=1.21.0,<2.0.0              # 数值计算
+opt_einsum                        # 优化的Einstein求和
+torch-ema                         # 指数移动平均
+matscipy                          # 材料科学工具
+
+# -------------------- D3色散校正 --------------------
+torch-dftd>=0.4.0                 # PyTorch实现的DFT-D3色散校正
+
+# -------------------- 工具库 --------------------
+h5py                              # HDF5文件支持
+matplotlib>=3.5.0                 # 绑图
+pandas                            # 数据分析
+tqdm                              # 进度条
+prettytable                       # 表格打印
+pyyaml                            # YAML配置文件
+
+# -------------------- 结构分析 --------------------
+pymatgen>=2023.0.0                # 材料基因组工具
+spglib>=2.0.0                     # 空间群分析

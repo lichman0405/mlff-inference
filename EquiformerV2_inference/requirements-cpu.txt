@@ -1,0 +1,45 @@
+# ============================================================
+# EquiformerV2 Inference Environment Requirements - CPU Version
+# ============================================================
+# Environment name suggestion: equiformerv2-inference-cpu
+# Python version: >= 3.9, <= 3.11 (recommended 3.10)
+# 
+# Installation instructions:
+# 1. Create conda environment: conda create -n equiformerv2-inference-cpu python=3.10
+# 2. Activate environment: conda activate equiformerv2-inference-cpu
+# 3. Install CPU PyTorch: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# 4. Install dependencies: pip install -r requirements-cpu.txt
+#
+# Use cases:
+# - Small structure testing and development
+# - Servers/laptops without GPU
+# - Lightweight inference tasks
+#
+# Note: CPU version is slower, not recommended for large MOF structures or long MD simulations
+# ============================================================
+
+# -------------------- Core Dependencies --------------------
+# EquiformerV2 model (OCP)
+equiformer-v2>=0.1.0              # EquiformerV2 main package
+e3nn>=0.5.0                       # E(3) equivariant neural networks
+
+# Atomic simulation environment
+ase>=3.22.0                       # Atomic Simulation Environment
+
+# Phonon calculations
+phonopy>=2.20.0                   # Phonon and thermodynamic properties
+
+# -------------------- EquiformerV2 Core Dependencies --------------------
+numpy>=1.21.0,<2.0.0              # Numerical computation
+scipy>=1.7.0                      # Scientific computing
+
+# -------------------- Utilities --------------------
+h5py                              # HDF5 file support
+matplotlib>=3.5.0                 # Plotting
+pandas                            # Data analysis
+tqdm                              # Progress bar
+prettytable                       # Table printing
+pyyaml                            # YAML configuration
+
+# -------------------- Structure Analysis --------------------
+pymatgen>=2023.0.0                # Materials Genome Toolkit

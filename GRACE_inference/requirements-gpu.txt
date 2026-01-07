@@ -1,0 +1,54 @@
+# ============================================================
+# GRACE Inference Environment Requirements - GPU Version
+# ============================================================
+# Environment name suggestion: grace-inference-gpu
+# Python version: >= 3.9, <= 3.11 (recommended 3.10)
+# GPU requirement: NVIDIA GPU with CUDA 11.8 or 12.1+
+# 
+# Installation instructions:
+# 1. Create conda environment: conda create -n grace-inference-gpu python=3.10
+# 2. Activate environment: conda activate grace-inference-gpu
+# 3. Install GPU PyTorch (choose based on CUDA version):
+#    - CUDA 12.1: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#    - CUDA 11.8: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# 4. Install DGL GPU: pip install dgl-cu118 -f https://data.dgl.ai/wheels/repo.html
+# 5. Install dependencies: pip install -r requirements-gpu.txt
+#
+# Use cases:
+# - Large MOF structure optimization
+# - Long MD simulations
+# - Batch inference tasks
+# - Phonon calculations
+#
+# Hardware requirements:
+# - NVIDIA GPU (compute capability >= 6.0)
+# - GPU memory >= 8GB (recommended >= 16GB)
+# - CUDA 11.8 or 12.1
+# ============================================================
+
+# -------------------- Core Dependencies --------------------
+# GRACE model
+grace-gnn>=0.1.0                  # GRACE main package
+dgl>=1.0.0                        # Deep Graph Library (GPU version)
+
+# Atomic simulation environment
+ase>=3.22.0                       # Atomic Simulation Environment
+
+# Phonon calculations
+phonopy>=2.20.0                   # Phonon and thermodynamic properties
+
+# -------------------- GRACE Core Dependencies --------------------
+numpy>=1.21.0,<2.0.0              # Numerical computation
+scipy>=1.7.0                      # Scientific computing
+
+# -------------------- Utilities --------------------
+h5py                              # HDF5 file support
+matplotlib>=3.5.0                 # Plotting
+pandas                            # Data analysis
+tqdm                              # Progress bar
+prettytable                       # Table printing
+pyyaml                            # YAML configuration
+
+# -------------------- Structure Analysis --------------------
+pymatgen>=2023.0.0                # Materials Genome Toolkit
+spglib>=2.0.0                     # Space group analysis
