@@ -60,8 +60,8 @@ pip install grace-inference[gpu]
 ### Development Installation
 
 ```bash
-git clone https://github.com/yourusername/grace-inference.git
-cd grace-inference
+git clone https://github.com/lichman0405/mlff-inference.git
+cd mlff-inference/GRACE_inference/grace-inference
 pip install -e ".[all]"
 ```
 
@@ -330,8 +330,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 For questions and support:
-- **Issues**: [GitHub Issues](https://github.com/yourusername/grace-inference/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/grace-inference/discussions)
+- **Issues**: [GitHub Issues](https://github.com/lichman0405/mlff-inference/issues)
+- **Email**: shadow.li981@gmail.com
 
 ---
 

@@ -24,8 +24,8 @@ A material property inference package based on MatterSim, designed for MOFs (Met
 pip install mattersim-inference
 
 # Or install from source
-git clone https://github.com/materials-ml/mattersim-inference
-cd mattersim-inference
+git clone https://github.com/lichman0405/mlff-inference.git
+cd mlff-inference/MatterSim_inference/mattersim-inference
 pip install -e .
 ```
 
@@ -154,4 +154,4 @@ Issues and Pull Requests are welcome!
 
 ## 📧 Contact
 
-For questions, please contact us via GitHub Issues.
+For questions, please contact us via GitHub Issues or email: shadow.li981@gmail.com

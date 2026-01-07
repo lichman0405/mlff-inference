@@ -24,8 +24,8 @@ A material property inference package based on EquiformerV2, the next-generation
 pip install equiformerv2-inference
 
 # Or install from source
-git clone https://github.com/materials-ml/equiformerv2-inference
-cd equiformerv2-inference
+git clone https://github.com/lichman0405/mlff-inference.git
+cd mlff-inference/EquiformerV2_inference/equiformerv2-inference
 pip install -e .
 ```
 
@@ -153,4 +153,4 @@ Issues and Pull Requests are welcome!
 
 ## 📧 Contact
 
-For questions, please contact us via GitHub Issues.
+For questions, please contact us via GitHub Issues or email: shadow.li981@gmail.com

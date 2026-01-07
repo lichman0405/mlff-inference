@@ -158,9 +158,9 @@ If you use Orb Inference in your research, please cite:
 ```bibtex
 @software{orb_inference,
   title = {Orb Inference: High-Level Interface for Orb Machine Learning Force Fields},
-  author = {MLFF-inference Project},
-  year = {2024},
-  url = {https://github.com/MLFF-inference/orb-inference}
+  author = {Shibo Li},
+  year = {2026},
+  url = {https://github.com/lichman0405/mlff-inference}
 }
 ```
 
@@ -191,7 +191,7 @@ Contributions welcome! Please:
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/MLFF-inference/orb-inference/issues)
+- **Issues**: [GitHub Issues](https://github.com/lichman0405/mlff-inference/issues)
 - **Documentation**: [Full docs](Orb_inference_tasks.md)
 - **Orb Models**: [Orbital Materials](https://orbitalmaterials.com)
 

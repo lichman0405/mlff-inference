@@ -24,8 +24,8 @@ A material property inference package based on SevenNet (Seven-layer Network), d
 pip install sevennet-inference
 
 # Or install from source
-git clone https://github.com/materials-ml/sevennet-inference
-cd sevennet-inference
+git clone https://github.com/lichman0405/mlff-inference.git
+cd mlff-inference/SevenNet_inference/sevennet-inference
 pip install -e .
 ```
 
@@ -153,4 +153,4 @@ Issues and Pull Requests are welcome!
 
 ## 📧 Contact
 
-For questions, please contact us via GitHub Issues.
+For questions, please contact us via GitHub Issues or email: shadow.li981@gmail.com

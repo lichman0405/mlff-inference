@@ -48,8 +48,8 @@ pip install mace-inference[d3]
 ### Development Installation
 
 ```bash
-git clone https://github.com/yourusername/mace-inference.git
-cd mace-inference
+git clone https://github.com/lichman0405/mlff-inference.git
+cd mlff-inference/MACE_inference/mace-inference
 pip install -e ".[all]"
 ```
 
@@ -204,9 +204,9 @@ If you use this library in your research, please cite:
 ```bibtex
 @software{mace_inference,
   title = {MACE Inference: High-level Python library for MACE force field inference},
-  author = {MACE Inference Contributors},
+  author = {Shibo Li},
   year = {2026},
-  url = {https://github.com/yourusername/mace-inference}
+  url = {https://github.com/lichman0405/mlff-inference}
 }
 ```
 

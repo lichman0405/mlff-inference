@@ -2,7 +2,7 @@
 
 [![PyPI Version](https://img.shields.io/pypi/v/esen-inference)](https://pypi.org/project/esen-inference/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/esen-inference)](https://pypi.org/project/esen-inference/)
-[![License](https://img.shields.io/github/license/yourusername/esen-inference)](LICENSE)
+[![License](https://img.shields.io/github/license/lichman0405/mlff-inference)](LICENSE)
 [![MOFSimBench Rank](https://img.shields.io/badge/MOFSimBench-Rank%20%231-gold)](https://github.com/SanggyuChong/MOFSimBench)
 
 **eSEN Inference** is a production-ready Python library for running inference with **eSEN (Smooth & Expressive Equivariant Networks)** machine learning force fields - the **#1 ranked model** in the MOFSimBench benchmark.
@@ -260,8 +260,8 @@ if not result['has_imaginary']:
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/esen-inference.git
-cd esen-inference
+git clone https://github.com/lichman0405/mlff-inference.git
+cd mlff-inference/eSEN_inference/esen-inference
 conda env create -f environment.yml
 conda activate esen
 pip install -e .
@@ -316,8 +316,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-- **Issues**: https://github.com/yourusername/esen-inference/issues
-- **Discussions**: https://github.com/yourusername/esen-inference/discussions
+- **Issues**: https://github.com/lichman0405/mlff-inference/issues
+- **Email**: shadow.li981@gmail.com
 
 ## 🔗 Related Projects
 
